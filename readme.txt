@@ -1,6 +1,6 @@
 micro optimization submission by Monica Moniot
 
-This repo contains multiple different attempts at making the convertall function faster. The primary one I submitted is the one in the file named "quad_converter.c", if that one is not acceptable then I submit "last_converter.c" as it's replacement.
+This repo contains multiple different attempts at making the convertall procedure faster. The primary one I submitted is the one in the file named "quad_converter.c", if that one is not acceptable then I submit "last_converter.c" as it's replacement.
 
 I relied heavily on Godbolt.org to analyze the assembly of my procedures and make more informed decisions about what optimizations could be done. All of my tests were ran on my laptop on the reed VM using a Intel i7-6700HQ CPU @ 2.6Ghz.
 
