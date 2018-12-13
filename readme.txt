@@ -6,10 +6,10 @@ I relied heavily on Godbolt.org to analyze the assembly of my procedures and mak
 
 Here is a summary of the history of each file in order of creation, and their run-times:
 0. converter.c "atoi"   (.108855s)
-The example code distributed with the project. According to the assembly, even with -O3, the program calls out to libc instead of inlining the function. This is probably why it's an order of magnitude slower than anything I tried.
+The example code distributed with the project. According to the assembly, even with -O3, the program calls out to libc instead of inlining the prodecure. This is probably why it's an order of magnitude slower than anything I tried.
 
 1. inline_converter.c   (.006843s)
-My first attempt was to simply inline the atoi function manually, and assume there would be no malformed input to handle. I also decided to only use raw pointers instead of an index variable, to cut out some unnecessary adds in the assembly.
+My first attempt was to simply inline the atoi prodecure manually, and assume there would be no malformed input to handle. I also decided to only use raw pointers instead of an index variable, to cut out some unnecessary adds in the assembly.
 
 2. cheating_converter.c (.004824s)
 I noticed that all input numbers are within the range 3-5 characters long, which makes sense. If these are real stock quotes, we can safely assume they will all be within a certain order of magnitude of each other. This may be a bad assumption, but it works very well for the given example quotes.
